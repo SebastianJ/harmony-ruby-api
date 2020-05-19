@@ -65,14 +65,18 @@ module Harmony
       end
 
       def response(resp)
-        resp = resp&.body
+        if resp.success?
+          resp  = resp&.body
 
-        error = resp&.fetch('error', {})
-        unless error.empty?
-          raise ::Harmony::Api::Error, "#{error.fetch('message', '')} (#{error.fetch('code', -1)})"
+          error = resp&.fetch('error', {})
+          unless error.empty?
+            raise ::Harmony::Api::Error, "#{error.fetch('message', '')} (#{error.fetch('code', -1)})"
+          end
+
+          resp&.fetch('result')
+        else
+          raise ::Harmony::Api::Error, "Failed to send request to #{self.url}"
         end
-
-        resp&.fetch('result')
       end
 
       def log(tag = self.class.name, message)

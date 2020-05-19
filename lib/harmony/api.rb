@@ -2,6 +2,7 @@
 
 require 'faraday'
 require 'faraday_middleware'
+require 'logger'
 
 require 'harmony/api/version'
 require 'harmony/api/configuration'

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    harmony-api (0.1.0)
+    harmony-api (0.1.2)
       faraday
       faraday_middleware
 

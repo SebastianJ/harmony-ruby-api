@@ -4,7 +4,7 @@ module Harmony
   module Api
     module V1
       class Client < ::Harmony::Api::Client
-        def initialize(network: :os, shard: 0, configuration: ::Harmony::Api.configuration, options: {})
+        def initialize(network: :mainnet, shard: 0, configuration: ::Harmony::Api.configuration, options: {})
           self.api_version = 1
           super
         end
