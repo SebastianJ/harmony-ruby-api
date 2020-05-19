@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-client = Harmony::Api::V1::Client.new(network: :os, shard: 0)
+client = Harmony::Api::V1::Client.new(network: :mainnet, shard: 0)
 client.get_all_validator_information
 ```
 
