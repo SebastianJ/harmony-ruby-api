@@ -5,7 +5,7 @@ module Harmony
     class Client
       attr_accessor :url, :payload, :configuration, :connection, :headers, :api_version
 
-      def initialize(network: :os, shard: 0, configuration: ::Harmony::Api.configuration, options: {})
+      def initialize(network: :mainnet, shard: 0, configuration: ::Harmony::Api.configuration, options: {})
         self.configuration = configuration
 
         set_url(network, shard)
@@ -78,6 +78,7 @@ module Harmony
       def log(tag = self.class.name, message)
         puts "[#{tag}] - #{Time.now}: #{message}" if configuration.verbose
       end
+      
     end
   end
 end
