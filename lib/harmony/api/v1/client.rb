@@ -17,6 +17,7 @@ module Harmony
         include ::Harmony::Api::V1::Transactions::Error
         include ::Harmony::Api::V1::Staking::Validator
         include ::Harmony::Api::V1::Staking::Delegator
+        include ::Harmony::Api::V1::Staking::Transaction
         include ::Harmony::Api::V1::Staking::Utility
         include ::Harmony::Api::V1::Staking::Error
         include ::Harmony::Api::V1::Contracts::Contract

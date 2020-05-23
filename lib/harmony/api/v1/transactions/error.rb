@@ -6,7 +6,7 @@ module Harmony
       module Transactions
         module Error
           def getCurrentTransactionErrorSink
-            response(post('hmy_getCurrentTransactionErrorSink'))
+            response(post('getCurrentTransactionErrorSink'))
           end
         end
       end

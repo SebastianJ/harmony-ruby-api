@@ -14,7 +14,7 @@ module Harmony
           end
 
           def get_staking_network_info
-            response(post('hmy_getStakingNetworkInfo'))
+            response(post('getStakingNetworkInfo'))
           end
 
           def get_median_raw_stake_snapshot

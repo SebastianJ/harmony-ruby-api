@@ -18,13 +18,13 @@ module Harmony
           # call contract method
           def call(address)
             params = [{ to: address }, 'latest']
-            response(post('hmy_call', params: params))
+            response(post('call', params: params))
           end
 
           # get deployed contract's byte code
           def get_code(address)
             params = [address, 'latest']
-            response(post('hmy_getCode', params: params))
+            response(post('getCode', params: params))
           end
         end
       end

@@ -9,13 +9,13 @@ module Harmony
             response(post('sendRawStakingTransaction', params: [hash]))
           end
 
-          def send_raw_staking_transaction(hash)
+          def get_staking_transaction_by_hash(hash)
             response(post('getStakingTransactionByHash', params: [hash]))
           end
 
           def get_staking_transaction_by_block_number_and_index(block_number, index)
             params = [Harmony::Api::Utilities.int_to_hex(block_number), Harmony::Api::Utilities.int_to_hex(index)]
-            response(post('hmy_getStakingTransactionByBlockNumberAndIndex', params: params))
+            response(post('getStakingTransactionByBlockNumberAndIndex', params: params))
           end
 
           def get_staking_transaction_by_block_hash_and_index(hash, index)

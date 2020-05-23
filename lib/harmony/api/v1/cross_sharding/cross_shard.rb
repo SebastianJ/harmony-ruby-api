@@ -20,15 +20,15 @@ module Harmony
           end
 
           def get_pending_cx_receipts
-            response(post('hmy_getPendingCXReceipts'))
+            response(post('getPendingCXReceipts'))
           end
 
           def get_cx_receipt_by_hash(hash)
-            response(post('hmy_getCXReceiptByHash', params: [hash]))
+            response(post('getCXReceiptByHash', params: [hash]))
           end
 
           def resend_cx(hash)
-            response(post('hmy_resendCx', params: [hash]))
+            response(post('resendCx', params: [hash]))
           end
         end
       end
