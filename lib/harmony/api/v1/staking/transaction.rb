@@ -23,6 +23,21 @@ module Harmony
             response(post('getStakingTransactionByBlockHashAndIndex', params: params))
           end
           
+          def get_staking_transactions_history(address, page_index: 0, page_size: 1000, full_txs: false, tx_type: :all, order: :asc)
+            params = [
+              {
+                'address'   => address,
+                'pageIndex' => page_index,
+                'pageSize'  => page_size,
+                'fullTx'    => full_txs,
+                'txType'    => tx_type.to_s.upcase,
+                'order'     => order.to_s.upcase
+              }
+            ]
+            
+            response(post('getStakingTransactionsHistory', params: params))
+          end
+          
         end
       end
     end
