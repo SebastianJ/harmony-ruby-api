@@ -34,16 +34,18 @@ module Harmony
           def get_transactions_history(address, page_index: 0, page_size: 1000, full_txs: false, tx_type: :all, order: :asc)
             params = [
               {
-                'address' => address,
+                'address'   => address,
                 'pageIndex' => page_index,
-                'pageIndex' => page_size,
-                'fullTx' => full_txs,
-                'txType' => tx_type.to_s.upcase,
-                'order' => order.to_s.upcase
+                'pageSize'  => page_size,
+                'fullTx'    => full_txs,
+                'txType'    => tx_type.to_s.upcase,
+                'order'     => order.to_s.upcase
               }
             ]
+            
             response(post('getTransactionsHistory', params: params))
           end
+          
         end
       end
     end

@@ -22,6 +22,7 @@ module Harmony
             params = [hash, Harmony::Api::Utilities.int_to_hex(index)]
             response(post('getStakingTransactionByBlockHashAndIndex', params: params))
           end
+          
         end
       end
     end
